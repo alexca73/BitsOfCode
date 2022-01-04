@@ -6,7 +6,8 @@ def remove_files_in_folder(files_path: str, *ext: str):
        Args:
            files_path (str): folder where are all the files we want to delete (included subfolders)
 
-           *ext: List of extensions to be deleted. Example: 'jpg', 'jpeg'
+           *ext: List of extensions to be deleted. Example: 'jpg', 'jpeg'. If we leave this empty
+                 nothing will be deleted
 
     """
     for folderName, subfolders, filenames in os.walk(files_path, topdown=True):
